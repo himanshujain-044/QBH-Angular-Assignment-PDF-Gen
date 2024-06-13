@@ -1,0 +1,15 @@
+<div class="container">
+  <button
+    *ngIf="cService.generatePDF | async as data"
+    (click)="viewGeneratedPDF()"
+  >
+    View PDF
+  </button>
+  <iframe
+    *ngIf="viewPDF"
+    height="600px"
+    width="100%"
+    [src]="urlSafe"
+    title="Users Detail PDF"
+  ></iframe>
+</div>

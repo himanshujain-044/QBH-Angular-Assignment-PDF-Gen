@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.form-container {
+  width: 300px;
+  max-width: 300px;
+  height: fit-content;
+}
+.table-container {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
+
+.form-container,
+.table-container {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  padding: 8px;
+}

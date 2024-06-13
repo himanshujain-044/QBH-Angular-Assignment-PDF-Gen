@@ -1,0 +1,65 @@
+<h3>Create User</h3>
+<div>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-controller">
+    <input placeholder="Name" type="text" formControlName="name" required />
+    <div
+      *ngIf="
+        userForm &&
+        userForm.controls.name.invalid &&
+        userForm.controls.name.touched
+      "
+      class="error"
+    >
+      {{ messages.NAME_REQ }}
+    </div>
+    <input placeholder="Email" type="email" formControlName="email" required />
+    <div
+      *ngIf="
+        userForm &&
+        userForm.controls.email.invalid &&
+        userForm.controls.email.touched
+      "
+      class="error"
+    >
+      {{ messages.EMAIL_REQ }}
+    </div>
+    <input
+      placeholder="Phone Number"
+      type="number"
+      formControlName="phone"
+      required
+    />
+    <div
+      *ngIf="
+        userForm &&
+        userForm.controls.phone.invalid &&
+        userForm.controls.phone.touched
+      "
+      class="error"
+    >
+      {{ messages.PHONE_REQ }}
+    </div>
+    <input
+      placeholder="Address"
+      type="text"
+      formControlName="address"
+      required
+    />
+    <div
+      *ngIf="
+        userForm &&
+        userForm.controls.address.invalid &&
+        userForm.controls.address.touched
+      "
+      class="error"
+    >
+      {{ messages.ADDRESS_REQ }}
+    </div>
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+  </form>
+
+  <button (click)="resetForm()" class="reset-btn">Reset</button>
+
+  <h4 class="success-msg">{{ successMsg }}</h4>
+  <h4 class="error-msg">{{ errorMsg }}</h4>
+</div>

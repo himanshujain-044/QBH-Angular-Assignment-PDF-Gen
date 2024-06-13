@@ -1,0 +1,26 @@
+th {
+  font-weight: 700;
+}
+
+.action-icons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.pdf-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.no-data-available {
+  display: flex;
+  justify-content: center;
+}
+app-f {
+  width: 100%;
+}
